@@ -22,13 +22,25 @@ import javax.swing.JPanel;
                     g.setColor(Color.BLUE);
                     g.fillRect(x1, y1, width+1, height+1);
                     
-                    //Draw a border
-                    g.setColor(Color.YELLOW);
-                    g.drawRect(x1,y1, width, height);
+//                    //Draw a border
+//                    g.setColor(Color.YELLOW);
+//                    g.drawRect(x1,y1, width, height);
+//                    
+//                    //Draw inner border
+//                    g.setColor(Color.MAGENTA);
+//                    g.drawRect(x1+5,y1+5, width-10, height-10);
+//                    
+//                    //draw a line 
+//                    g.setColor(Color.WHITE);
+//                    g.drawLine(x1, y1, x2, y2);
+//                    
+//                    g.setColor(Color.GREEN);
+//                    g.drawLine(x2, y1, x1, y2); 
+                  
                     
-                    //Draw inner border
-                    g.setColor(Color.MAGENTA);
-                    g.drawRect(x1+5,y1+5, width-10, height-10);
+                    g.setColor(Color.LIGHT_GRAY);
+                    g.fillOval((x2-55)/2,(y2-55)/2, 55,55);
+                    
         }
 }
 
