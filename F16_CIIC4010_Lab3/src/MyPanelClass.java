@@ -21,7 +21,7 @@ import javax.swing.JPanel;
                     int height = y2 - y1;
 
                     //Paint the background
-                    g.setColor(Color.BLUE);
+                    g.setColor(Color.RED);
                     g.fillRect(x1, y1, width+1, height+1);
                     
 //                    //Draw a border
@@ -66,7 +66,14 @@ import javax.swing.JPanel;
                     p2.addPoint(x1 + 34, y1 + 98);
                     p2.addPoint(x1 + 38, y1 + 83);
                     g.setColor(Color.WHITE);
-                    g.drawPolygon(p2);
+                    g.fillPolygon(p2);
+                    
+                    Polygon p3 = new Polygon();
+                    p3.addPoint(x1, y1);
+                    p3.addPoint(x1+120, y1+80);
+                    p3.addPoint(x1, y1+150);
+                    g.setColor(Color.BLUE);
+                    g.drawPolygon(p3);
                     
         }
 }
