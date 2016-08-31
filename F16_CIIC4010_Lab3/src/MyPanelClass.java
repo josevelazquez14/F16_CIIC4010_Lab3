@@ -5,7 +5,8 @@ import javax.swing.JPanel;
 
 //public class MyPanelClass {
 	public class MyPanelClass extends JPanel {
-        public void paintComponent(Graphics g) {
+       
+		public void paintComponent(Graphics g) {
                     super.paintComponent(g);
 
                     //Compute interior coordinates
@@ -13,7 +14,7 @@ import javax.swing.JPanel;
                     int x1 = myInsets.left;
                     int y1 = myInsets.top;
                     int x2 = getWidth() - myInsets.right - 1;
-                    int y2 = getHeight() - myInsets.bottom - 1;
+                    int y2 = getHeight( ) - myInsets.bottom - 1;
                     int width = x2 - x1;
                     int height = y2 - y1;
 
@@ -25,7 +26,7 @@ import javax.swing.JPanel;
                     g.setColor(Color.YELLOW);
                     g.drawRect(x1,y1, width, height);
                     
-                    //Draw a border inside the other border
+                    //Draw inner border
                     g.setColor(Color.MAGENTA);
                     g.drawRect(x1+5,y1+5, width-10, height-10);
         }
