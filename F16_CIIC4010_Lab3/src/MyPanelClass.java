@@ -2,6 +2,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Insets;
 import java.awt.Polygon;
+import java.awt.Rectangle;
+import java.awt.Graphics2D; 
 
 import javax.swing.JPanel;
 
@@ -21,8 +23,8 @@ import javax.swing.JPanel;
                     int height = y2 - y1;
 
                     //Paint the background
-                    g.setColor(Color.RED);
-                    g.fillRect(x1, y1, width+1, height+1);
+                  // g.setColor(Color.WHITE);
+                   // g.fillRect(x1, y1, width+1, height+1);
                     
 //                    //Draw a border
 //                    g.setColor(Color.YELLOW);
@@ -54,26 +56,49 @@ import javax.swing.JPanel;
 //                    g.setColor(Color.YELLOW);
 //                    g.fillPolygon(p);           
          
-                    Polygon p2 = new Polygon();
-                    p2.addPoint(x1 + 25, y1 + 73);
-                    p2.addPoint(x1 + 41, y1 + 73);
-                    p2.addPoint(x1 + 47, y1 + 58);
-                    p2.addPoint(x1 + 53, y1 + 73);
-                    p2.addPoint(x1 + 69, y1 + 73);
-                    p2.addPoint(x1 + 56, y1 + 83);
-                    p2.addPoint(x1 + 61, y1 + 98);
-                    p2.addPoint(x1 + 47, y1 + 88);
-                    p2.addPoint(x1 + 34, y1 + 98);
-                    p2.addPoint(x1 + 38, y1 + 83);
-                    g.setColor(Color.WHITE);
-                    g.fillPolygon(p2);
+                  
+                  
                     
-                    Polygon p3 = new Polygon();
-                    p3.addPoint(x1, y1);
-                    p3.addPoint(x1+120, y1+80);
-                    p3.addPoint(x1, y1+150);
-                    g.setColor(Color.BLUE);
-                    g.drawPolygon(p3);
+                    Graphics2D g2 = (Graphics2D) g;
+                   
+                    //first red line
+                      g2.setColor(Color.RED);
+                      g2.fillRect(x1, y1, 210, 30);
+                     
+                    //second red line
+                      g2.setColor(Color.RED);
+                      g2.fillRect(x1, y1+60, 210, 30);
+                      
+                   //third red line
+                      g2.setColor(Color.RED);
+                      g2.fillRect(x1, y1+120, 210, 30);
+                      
+                      //triangle
+                      Polygon p3 = new Polygon();
+                      p3.addPoint(x1, y1);
+                      p3.addPoint(x1+120, y1+80);
+                      p3.addPoint(x1, y1+150);
+                      g.setColor(Color.BLUE);
+                      g.fillPolygon(p3);
+                      
+                      //star
+                      Polygon p2 = new Polygon();
+                      p2.addPoint(x1 + 25, y1 + 73);
+                      p2.addPoint(x1 + 41, y1 + 73);
+                      p2.addPoint(x1 + 47, y1 + 58);
+                      p2.addPoint(x1 + 53, y1 + 73);
+                      p2.addPoint(x1 + 69, y1 + 73);
+                      p2.addPoint(x1 + 56, y1 + 83);
+                      p2.addPoint(x1 + 61, y1 + 98);
+                      p2.addPoint(x1 + 47, y1 + 88);
+                      p2.addPoint(x1 + 34, y1 + 98);
+                      p2.addPoint(x1 + 38, y1 + 83);
+                      g.setColor(Color.WHITE);
+                      g.fillPolygon(p2);
+                      
+                      
+                      
+                 
                     
         }
 }

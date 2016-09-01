@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class Lab3Exercises {
 	public static void main(String[] args) {
-		JFrame myFrame = new JFrame("Jos√© A.  Vel√°zquez");
+		JFrame myFrame = new JFrame("JosÈ A.  Vel·zquez");
 		myFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		myFrame.setLocation(950, 350);
 		myFrame.setSize(200, 200);
